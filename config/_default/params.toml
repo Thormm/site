@@ -1,0 +1,177 @@
+#################### default parameters ################################
+# favicon
+favicon = "images/favicon.png"
+# logo 
+logo = "images/logo.png"
+# use `px` or `x` with logo_width, example: "100px".
+# Note: logo_width is not work with .svg file
+logo_width = ""
+# if logo_webp set false, will not generate WEBP version of logo | default is true
+logo_webp = false
+# logo text will only show when logo is missing.
+logo_text = "redlab"
+
+# purgeCSS
+purge_css = true 
+
+# Main Sections
+mainSections = ["blog"]
+
+# search
+search = true
+
+# contact form action
+contact_form_action = "#" # contact form works with [https://airform.io/] or [https://formspree.io]
+
+# google tag manager, see https://developers.google.com/tag-manager/
+google_adsense = "" # example: ca-pub-xxxxxxxxxxxxxxxx
+google_tag_manager = "" # example: G-XXXXXXXXXX
+
+# custom script on header, example: custom_script= "<script>console.log(\"Hello World\")</script>"
+custom_script = ""
+
+# copyright
+copyright = "Copyright by your company"
+theme_copyright = true
+
+# Preloader
+[preloader]
+enable = true 
+preloader = "" # use jpg, png, svg or gif format.
+
+# Navigation button
+[navigation_button]
+enable = true
+label = "get a quote"
+link = "contact"
+
+# CTA 
+[cta]
+enable = true
+title = "Looking for First-Class PHP Developer?"
+button_enable = true
+button_label = "get a qoute"
+button_link = "contact/"
+
+# Clients Logo
+[[clients]] 
+logo = "images/clients-logo/clients-logo-1.png"
+
+[[clients]] 
+logo = "images/clients-logo/clients-logo-2.png"
+
+[[clients]] 
+logo = "images/clients-logo/clients-logo-3.png"
+
+[[clients]] 
+logo = "images/clients-logo/clients-logo-4.png"
+
+[[clients]] 
+logo = "images/clients-logo/clients-logo-5.png"
+
+[[clients]] 
+logo = "images/clients-logo/clients-logo-1.png"
+
+[[clients]] 
+logo = "images/clients-logo/clients-logo-2.png"
+
+[[clients]] 
+logo = "images/clients-logo/clients-logo-3.png"
+
+[[clients]] 
+logo = "images/clients-logo/clients-logo-4.png"
+
+[[clients]] 
+logo = "images/clients-logo/clients-logo-5.png" 
+
+
+# contact info
+[contact_info]
+address = "9567 Turner Trace Apt. BC C3G8A4"
+email = "info@redlab.com"
+mobile = "+211234565523" 
+
+
+# footer content
+[footer]
+content = "Lorem ipsum dolor amet consectetur adipisicing elit sed eiusm tempor incididunt ut labore dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamaboris nisi ut aliquip.exea commodo consequat."
+
+# Crisp Chat
+[crisp_chat]
+crisp_website_id = "9aa449e1-9999-422a-938f-8567982eec6d" # replace this code with yours
+enable = false 
+# Check this video tutorial to get your crisp website ID - https://www.youtube.com/watch?v=nW5UX6iVdFc
+
+# seo meta data for OpenGraph / Twitter Card
+[metadata]
+author = "Themefisher" 
+description = "This is meta description" 
+image = "images/favicon.png" # this image will be used as fallback if a page has no image of its own
+keywords = ["Boilerplate", "Hugo", "Themefisher", "GetHugoThemes"] 
+
+# matomo tracking: see https://matomo.org/
+[matomo]
+enable = false 
+id = "" # your matomo id
+url = "" # your matomo url
+
+# baidu analytics: see https://tongji.baidu.com/
+[baidu]
+analytics_id = "" # Your ID
+enable = false 
+
+# plausible analytics: see https://plausible.io/
+[plausible]
+domain = "" # yourdomain.com
+enable = false 
+
+# counter analytics: see https://counter.dev/setup.html
+[counter]
+enable = false 
+username = "" # your username
+
+# site verifications
+[site_verification]
+baidu = "" # Your verification code
+bing = "" # Your verification code
+facebook = "" # Your verification code
+google = "" # Your verification code
+mastodon = "" # Your verification code 
+
+# google map
+[google_map]
+enable = true
+embed_url = "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d193559.60513193885!2d-74.07513185946965!3d40.709896425630156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1677481601686!5m2!1sen!2sbd"
+
+# cookies
+[cookies]
+button = "I Accept"
+content = "This site uses cookies. By continuing to use this website, you agree to their use."
+enable = false
+expire_days = 2
+
+######################## sidebar widgets #########################
+[widgets]
+sidebar = ["categories", "tags", "recent-post"]
+# available widget : categories,tags,recent-post
+
+############################# social site ########################
+[[social]]
+icon = "ti-facebook" # fontawesome icon pack : https://fontawesome.com/icons/
+link = "#" 
+title = "facebook" 
+
+[[social]]
+icon = "ti-twitter-alt" # fontawesome icon pack : https://fontawesome.com/icons/
+link = "#" 
+title = "twitter"   
+
+[[social]]
+icon = "ti-github" # fontawesome icon pack : https://fontawesome.com/icons/
+link = "#" 
+title = "github" 
+
+[[social]]
+icon = "ti-linkedin" # fontawesome icon pack : https://fontawesome.com/icons/
+link = "#" 
+title = "linkedin"

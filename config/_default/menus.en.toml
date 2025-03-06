@@ -1,0 +1,51 @@
+# main menu
+[[main]]
+name = "About"
+URL = "about/"
+weight = 1
+
+[[main]]
+name = "Portfolio"
+URL = "portfolio/"
+weight = 2
+
+[[main]]
+weight = 3
+name = "Pages"
+hasChildren = true
+
+[[main]]
+parent = "Pages"
+name = "Career"
+URL = "career/"
+
+[[main]]
+parent = "Pages"
+name = "Blog"
+URL = "blog/"
+
+[[main]]
+name = "Contact"
+URL = "contact/"
+weight = 4
+
+# footer menu
+[[footer]]
+name = "Latest News"
+URL = "blog/"
+weight = 1
+
+[[footer]]
+name = "About US"
+URL = "about/"
+weight = 2
+
+[[footer]]
+name = "Our Service"
+URL = "service"
+weight = 3
+
+[[footer]]
+name = "Privacy Policy"
+URL = "blog"
+weight = 4

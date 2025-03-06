@@ -1,0 +1,90 @@
+/* Button style */
+.btn {
+  font-size: 15px;
+  font-family: $font-primary;
+  text-transform: capitalize;
+  padding: 15px 40px;
+  border-radius: 0;
+  font-weight: 500;
+  border: 1px solid;
+  position: relative;
+  z-index: 1;
+  transition: .2s ease;
+
+  &:hover,
+  &:active,
+  &:focus {
+    outline: 0;
+    box-shadow: none !important;
+    background-color: $color-primary;
+    border-color: $color-primary;
+  }
+
+  &-lg{
+    padding: 18px 50px;
+    font-size: 18px;
+  }
+  &-sm{
+    padding: 10px 35px;
+    font-size: 14px;
+  }
+}
+
+.btn-primary {
+  background: $color-primary;
+  color: $white;
+  border-color: $color-primary;
+
+  &:active,
+  &:hover,
+  &.focus,
+  &.active {
+    background: darken($color: $color-primary, $amount: 10) !important;
+    border-color: darken($color: $color-primary, $amount: 10) !important;
+  }
+}
+
+.btn-outline-primary {
+  background: transparent;
+  color: $color-primary;
+  border-color: $color-primary;
+
+  &:active,
+  &:hover,
+  &.focus,
+  &.active {
+    background: darken($color: $color-primary, $amount: 10) !important;
+    border-color: darken($color: $color-primary, $amount: 10) !important;
+    color: $white;
+  }
+}
+
+.btn-secondary {
+  background: $color-secondary;
+  color: $white;
+  border-color: $color-secondary;
+
+  &:active, 
+  &:hover,
+  &:focus,
+  &.focus,
+  &.active {
+    background: darken($color: $color-secondary, $amount: 10) !important;
+    border-color: darken($color: $color-secondary, $amount: 10) !important;
+  }
+}
+
+.btn-outline-secondary {
+  background: transparent;
+  color: $color-secondary;
+  border-color: $color-secondary;
+
+  &:active,
+  &:hover,
+  &.focus,
+  &.active {
+    background: darken($color: $color-secondary, $amount: 10) !important;
+    border-color: darken($color: $color-secondary, $amount: 10) !important;
+    color: $white;
+  }
+}

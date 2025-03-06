@@ -1,0 +1,19 @@
+{
+  "name": "redlab-hugo",
+  "version": "2.1.1",
+  "license": "UNLICENSED",
+  "author": "gethugothemes",
+  "scripts": {
+    "dev": "hugo server",
+    "test": "hugo server --disableFastRender --navigateToChanged --templateMetrics --templateMetricsHints --watch --forceSyncStatic -e production --minify || hugo server --disableFastRender --navigateToChanged --templateMetrics --templateMetricsHints --watch --forceSyncStatic -e production --minify",
+    "build": "hugo --gc --minify --templateMetrics --templateMetricsHints --forceSyncStatic || hugo --gc --minify --templateMetrics --templateMetricsHints --forceSyncStatic",
+    "update": "hugo mod clean && hugo mod get -u ./... && hugo mod tidy"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^5.0.0",
+    "postcss": "^8.4.20",
+    "postcss-cli": "^10.1.0",
+    "prettier": "^2.8.1",
+    "prettier-plugin-go-template": "0.0.13"
+  }
+}

@@ -1,0 +1,9 @@
+{{$widgets := site.Params.widgets.sidebar }}
+
+{{ "<!-- sidebar -->" | safeHTML }}
+<aside class="col-lg-4 order-1 order-lg-2">
+{{ range $widgets }}
+{{ partial ( print "widgets/" . ) }}
+{{ end }}
+</aside>
+{{ "<!-- /sidebar -->" | safeHTML }}

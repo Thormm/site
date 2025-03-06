@@ -1,0 +1,35 @@
+{{ define "main" }}
+
+<!-- portfolio -->
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2 class="section-title">{{ i18n "our_works"}}</h2>
+      </div>
+      {{ range .RegularPages }}
+      <div class="col-lg-4 col-sm-6 mb-4">
+        <div class="card rounded-0 p-4 text-center hover-bg-secondary">
+          {{ with .Params.Image }}
+          {{ partial "image.html" (dict "Src" . "Alt" ""  "Class" `align-self-center w-auto pt-4`) }}
+          {{ end }}
+          <div class="card-body">
+            <h3 class="h4 card-title">{{ .Title | markdownify }}</h3>
+            <p class="card-text">{{ .Summary }}</p>
+            <a href="{{.Permalink}}" class="btn btn-sm btn-primary">{{ i18n "know_more"}}</a>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+<!-- /portfolio -->
+
+<!-- clients -->
+{{ if .Params.clients_logo.enable }}
+{{ partial "components/clients-logo-slider.html" . }}
+{{ end }}
+<!-- /clients -->
+
+{{ end }}

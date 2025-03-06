@@ -1,0 +1,17 @@
+{{ "<!-- latest post -->" | safeHTML }}
+<div class="bg-white">
+  <h4 class="mb-4">{{ i18n "latest_article" }}</h4>
+  {{ "<!-- post-item -->" | safeHTML }}
+  {{ range first 3 ( (where site.Pages "Type" "post" ).ByPublishDate.Reverse )}}
+  <div class="media border-bottom border-color pb-3 mb-3">
+    <a href="{{ .Permalink }}">
+      {{ partial "image.html" (dict "Src" .Params.Image "Alt" .Title  "Class" `me-3 post-thumb-sm`) }}</a>
+    <div class="media-body">
+      <a href="{{ .Permalink }}">
+        <h5 class="mt-0">{{ .Title }}</h5>
+      </a>
+      {{ .PublishDate.Format "02 Jan 2006" }}
+    </div>
+  </div>
+  {{ end }}
+</div>

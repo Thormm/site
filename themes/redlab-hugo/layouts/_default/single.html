@@ -1,0 +1,30 @@
+{{ define "main" }}
+
+<div class="bg-secondary py-5">
+  <div class="p-2"></div>
+</div>
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 order-2 order-lg-1"> 
+        <h2 class="mb-4">{{ .Title }}</h2> 
+        {{ partial "image.html" (dict "Src" .Params.Image "Alt" .Title "Class" `w-100 mb-2`) }}
+        <div class="mb-4">By <a class="text-dark fw-bold"
+            href="{{ `author/` | relLangURL }}{{ .Params.Author | urlize }}">{{ .Params.Author | title }}</a> / on
+          <strong class="text-dark">{{ .PublishDate.Format "02 Jan, 2006" }}</strong></div>
+        <div class="content">{{ .Content }}</div>
+
+        <!-- comments -->
+        {{ if site.Config.Services.Disqus.Shortname }}
+        <div class="mt-5">
+          {{ template "_internal/disqus.html" . }}
+        </div>
+        {{ end }}
+      </div>
+      {{ partial "components/blog-sidebar.html" . }}
+    </div>
+  </div>
+</section>
+
+{{ end }}

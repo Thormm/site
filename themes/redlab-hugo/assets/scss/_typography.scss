@@ -1,0 +1,73 @@
+/*  typography */
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700|Roboto:300,400,500,700&display=swap');
+
+body {
+  line-height: 1.5;
+  font-family: $font-secondary;
+  -webkit-font-smoothing: antialiased;
+  font-size: 15px;
+  color: $text-light;
+  font-weight: 400;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $text-color;
+  font-family: $font-primary;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+h1,
+.h1 {
+  font-size: 60px;
+
+  @include tablet {
+    font-size: 45px;
+  }
+}
+
+// List in descending order to prevent extra sort function
+$type-levels: 6, 5, 4, 3, 2;
+
+@each $level in $type-levels {
+  $font-size: $font-size * $font-scale;
+
+  // Output heading styles
+  h#{$level},
+  .h#{$level} {
+    font-size: $font-size;
+    line-height: calc(2px + 2ex + 2px);
+    margin-bottom: 0.65em;
+
+    // responsive for h1, h2, h3, h4
+    &:not(h5, .h5, h6, .h6) {
+      @include desktop {
+        font-size: calc(#{$font-size} * 0.9);
+        margin-bottom: 0.55em;
+      }
+
+      @include tablet {
+        font-size: calc(#{$font-size} * 0.8);
+      }
+    }
+
+    // responsive for h5, h6
+    @include desktop {
+      font-size: calc(#{$font-size} * 0.95);
+      margin-bottom: 0.55em;
+    }
+
+    @include tablet {
+      font-size: calc(#{$font-size} * 0.9);
+    }
+  }
+}

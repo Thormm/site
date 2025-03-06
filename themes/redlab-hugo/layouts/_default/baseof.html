@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="{{ site.LanguageCode | default `en-US` }}" itemscope itemtype="http://schema.org/WebPage">
+
+<head>
+  <!-- head (don't cache it) -->
+  {{ partial "essentials/head.html" . }}
+
+
+  <!-- cache partial only in production -->
+  {{ if hugo.IsProduction }}
+  {{ partialCached "essentials/style.html" . }}
+  {{ else }}
+  {{ partial "essentials/style.html" . }}
+  {{ end }}
+</head>
+
+<body>
+
+  <!-- header (don't cache it) -->
+  {{ partial "essentials/header.html" . }}
+
+  <!-- cache partial only in production -->
+  {{ if hugo.IsProduction }}
+  {{ partialCached "preloader.html" . }}
+  {{ partialCached "gtm-noscript.html" . }}
+  {{ else }}
+  {{ partial "preloader.html" . }}
+  {{ end }}
+
+  {{ if and (not .IsHome) (ne .Section "blog")}}
+  {{ partial "components/page-title.html" . }}
+  {{ end }}
+
+  {{ if .Params.cta.enable }}
+  {{ if and (not .IsHome) (ne .Section "blog")}}
+  {{ partial "components/cta.html" . }}
+  {{ end }}
+  {{ end }}
+
+  <main>
+    {{ block "main" . }}{{ end }}
+  </main>
+
+  <!-- cache partial only in production -->
+  {{ if hugo.IsProduction }}
+  {{ partialCached "essentials/footer.html" . }}
+  {{ partialCached "essentials/script.html" . }}
+  {{ else }}
+  {{ partial "essentials/footer.html" . }}
+  {{ partial "essentials/script.html" . }}
+  {{ end }}
+</body>
+
+</html>
