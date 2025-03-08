@@ -2,7 +2,7 @@
 ################## Banner  ##################
 banner:
   bg_image: "images/backgrounds/banner.jpg"
-  title : "The development of technological solutions is our forte"
+  title : "The development of technological solutions"
   content : "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum voluptatem enim
             quibusdam a necessitatibus! Adipisci culpa inventore harum optio vitae totam aliquam, iusto minus quo hic ipsam."
             
